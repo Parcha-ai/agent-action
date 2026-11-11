@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #eeeef0; background: #101113; --aa-background: #202227; --aa-foreground: #eeeef0; --aa-border: #44474c; --aa-hover: #30343c; --aa-muted: #a0a6b2; }
+body { margin: 0; }
+main { max-width: 1120px; padding: 0 40px 40px; margin: auto; }
+nav { height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #292b30; }
+a { color: inherit; text-decoration: none; }
+nav span:not(.brand span) { color: #92959e; font-size: 10px; letter-spacing: .15em; }
+nav > a:last-child { color: #a7a9b2; font-size: 12px; }
+.brand { font-size: 20px; font-weight: 700; letter-spacing: -.8px; }
+.brand span { color: #bbf3c2; }
+header { padding: 58px 0 34px; }
+.eyebrow { color: #b3ddbb; font-size: 10px; font-weight: 600; letter-spacing: .16em; }
+h1 { margin: 18px 0; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; letter-spacing: -2px; font-weight: 560; }
+header > p:last-child { color: #a5a7ae; font-size: 16px; }
+.composer { border: 1px solid #44474c; border-radius: 16px; padding: 24px; background: #191b1f; }
+.composer label { display: block; font-size: 13px; font-weight: 600; color: #d9dce2; margin-bottom: 12px; }
+.composer textarea { display: block; resize: vertical; width: 100%; min-height: 84px; background: transparent; border: none; font: inherit; color: #aeb2bc; line-height: 1.65; outline-offset: 6px; }
+footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 14px; }
+footer > span { color: #878c97; font-size: 12px; }
+.examples-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; margin: 22px 0; }
+.mini-card { padding: 22px; border: 1px solid #303239; border-radius: 12px; }
+.tile-icon { font-size: 22px; color: #b3ddbb; }
+h2 { font-size: 16px; font-weight: 550; margin: 18px 0 8px; }
+.mini-card p { color: #9b9fa9; font-size: 13px; line-height: 1.6; min-height: 42px; margin: 0 0 22px; }
+.implementation { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; padding: 20px 0; color: #9499a3; }
+.implementation code { color: #c4c9d3; font-size: 12px; }
+.implementation span { margin-left: auto; font-size: 11px; }
+.implementation small { flex-basis: 100%; font-size: 10px; }
+.playground { margin-top: 16px; padding: 20px; border: 1px solid #444; border-radius: 12px; }
+.playground button { float: right; color: inherit; background: #333; border: 0; padding: 8px; border-radius: 4px; }
+.playground pre { white-space: pre-wrap; color: #aeb2bc; }
+@media (max-width: 700px) { main { padding: 0 20px 20px; } nav > span { display: none; } header { padding-top: 32px; } footer { flex-wrap: wrap; } .examples-grid { grid-template-columns: 1fr; } .mini-card p { min-height: 0; } .implementation span { margin-left: 0; } }

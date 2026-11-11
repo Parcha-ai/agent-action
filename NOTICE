@@ -1,0 +1,6 @@
+Agent Action
+Copyright 2026 Parcha
+
+The component's interaction design is based on Parcha's Apache-2.0 AgentRun console.
+Provider names identify third-party applications; this package does not bundle
+their logos or imply endorsement. Consumers may supply their own licensed icons.
