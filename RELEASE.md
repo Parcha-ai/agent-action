@@ -1,9 +1,12 @@
 # Release candidate: @parcha/agent-action 0.1.0
 
-The package is prepared locally on `feat/extract-agent-action`. It has not been
-published to npm or pushed to a remote repository.
+Source repository: [Parcha-ai/agent-action](https://github.com/Parcha-ai/agent-action).
+The package is Apache-2.0 licensed and has not been published to npm.
 
 ## Verified
+
+The checks below were run locally. The repository includes an optional workflow
+recipe in `docs/github-actions-check.yml`; GitHub Actions is not enabled.
 
 - TypeScript, distribution build, 39 core tests and 14 React tests pass.
 - Seven real Chrome checks pass: preference sharing/reload, task-specific
@@ -18,9 +21,11 @@ published to npm or pushed to a remote repository.
 
 ## Try it
 
-Install `parcha-agent-action-0.1.0.tgz` from this directory in a React project.
+Run `npm pack` and install `parcha-agent-action-0.1.0.tgz` in a React project.
 See `README.md` for the API. Run `npm run dev` for the example; the Tailwind-only
-example is `/tailwind.html`.
+example is `/tailwind.html` and the media showcase is `/showcase.html`.
+The README includes a screenshot and two recordings of the actual component.
+These media files stay out of the npm archive.
 
 The source uses Node 24, pinned in `.nvmrc`. Reproduce with:
 
@@ -33,9 +38,9 @@ npm run test:browser
 
 ## Publish
 
-`npm whoami` currently returns HTTP 401 on this machine. Restore npm
-authentication with publish access to the `@parcha` scope; never put a token
-in the repository or prompt. No publish was attempted.
+Publishing requires npm authentication with access to the `@parcha` scope.
+Never put a token in the repository or prompt. GitHub source publication does
+not publish the npm package.
 
 Before publication, update the README's release-status/install wording, run
 the checks above, then `npm pack` and inspect the archive. Publish the reviewed

@@ -4,6 +4,8 @@ A split button that remembers a user's coding agent and hands it the right
 prompt. Built from the AgentRun console's **Use your agent** interaction, with
 product-specific prompts and styling left to you.
 
+![Agent Action: build-agent input and coding-agent dropdown](https://raw.githubusercontent.com/Parcha-ai/agent-action/main/docs/media/agent-action.png)
+
 - Open Codex, Claude Code, or Cursor with a prefilled prompt.
 - Keep CLI destinations distinct and copy prompts into existing sessions.
 - Remember the choice across buttons and visits, or control it yourself.
@@ -13,6 +15,26 @@ product-specific prompts and styling left to you.
 **Release status:** this is a release candidate; it has not been published to
 npm. The package is Apache-2.0 licensed. React integrations support React 18.3
 and 19. Tailwind is not a dependency.
+
+## See it work
+
+Choose an agent, then hand off the prompt. This demo selects Claude Code CLI
+and copies the input to the clipboard.
+
+![Open the dropdown, choose Claude Code CLI, and copy a prompt](https://raw.githubusercontent.com/Parcha-ai/agent-action/main/docs/media/choose-agent.gif)
+
+[Download MP4](https://github.com/Parcha-ai/agent-action/raw/refs/heads/main/docs/media/choose-agent.mp4)
+
+The same choice follows you across product actions and survives a page reload.
+
+![The selected coding agent stays in sync across buttons and after reload](https://raw.githubusercontent.com/Parcha-ai/agent-action/main/docs/media/remember-choice.gif)
+
+[Download MP4](https://github.com/Parcha-ai/agent-action/raw/refs/heads/main/docs/media/remember-choice.mp4)
+
+These recordings use the real component. Desktop app launches are not shown.
+To try it yourself, clone this repo, run `npm ci && npm run dev`, and open
+`http://127.0.0.1:5173/showcase.html`. Your product supplies the prompts,
+including any skills, MCP, API, or onboarding instructions.
 
 ## Install
 
@@ -299,8 +321,15 @@ checks ESM, CommonJS, types, SSR, and the dependency-free core import.
 `test:browser` uses an installed Chrome to check interactions, mobile layout,
 and compiled Tailwind styling. `dev` starts the example application's server;
 visit `/tailwind.html` for a version with only Tailwind classes.
+The media showcase is at `/showcase.html`. With Chrome and FFmpeg installed,
+run `npm run demo:capture` to regenerate the README screenshot and animations.
 `npm pack` builds an installable archive without publishing it. Native app
 launch behavior needs a separate manual check on each supported desktop platform.
+
+An optional [GitHub Actions workflow](docs/github-actions-check.yml) is included
+as a setup example. To enable it, copy it to `.github/workflows/check.yml` using
+an account or app with workflow permissions. The initial public release was
+verified locally; automated GitHub checks are not enabled.
 
 ## License
 

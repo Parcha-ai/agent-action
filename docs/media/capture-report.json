@@ -1,0 +1,30 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "outputSize": {
+    "width": 1200,
+    "height": 800
+  },
+  "realClipboardVerified": true,
+  "sharedPreferenceVerified": true,
+  "preferenceAfterReloadVerified": true,
+  "extraActionCallbackVerified": true,
+  "nativeAppLaunched": false,
+  "browserErrors": [],
+  "recordings": [
+    {
+      "name": "choose-agent",
+      "duration": 10.67,
+      "gifBytes": 265285,
+      "mp4Bytes": 141640
+    },
+    {
+      "name": "remember-choice",
+      "duration": 10.95,
+      "gifBytes": 308777,
+      "mp4Bytes": 158023
+    }
+  ]
+}

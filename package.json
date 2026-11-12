@@ -5,6 +5,14 @@
   "type": "module",
   "license": "Apache-2.0",
   "author": "Parcha",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parcha-ai/agent-action.git"
+  },
+  "homepage": "https://github.com/Parcha-ai/agent-action#readme",
+  "bugs": {
+    "url": "https://github.com/Parcha-ai/agent-action/issues"
+  },
   "sideEffects": [
     "**/*.css"
   ],
@@ -13,7 +21,7 @@
     "README.md",
     "LICENSE",
     "NOTICE",
-    "docs"
+    "docs/*.md"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -53,7 +61,8 @@
     "prepack": "npm run build",
     "dev": "vite examples --host 127.0.0.1",
     "test:package": "npm run build && node scripts/verify-package.mjs",
-    "test:browser": "playwright test"
+    "test:browser": "playwright test",
+    "demo:capture": "node scripts/capture-demo.mjs"
   },
   "peerDependencies": {
     "react": "^18.3.0 || ^19.0.0",

@@ -18,6 +18,7 @@ for (const entry of ['dist/index.js', 'dist/index.cjs', 'dist/index.d.ts', 'dist
 }
 for (const { path } of pack.files) {
   assert(/^(dist\/|docs\/|README\.md$|LICENSE$|NOTICE$|package\.json$)/.test(path), `Unexpected release file: ${path}`);
+  assert(!path.startsWith('docs/media/'), `Demo media must stay out of the package: ${path}`);
   if (/\.(?:js|cjs|map|json|ts|cts|css|md)$/.test(path)) {
     const contents = readFileSync(join(root, path), 'utf8');
     assert(!/\/home\/ubuntu\/|max-zorin\.m\.parcha\.dev|baron-samedi\.m\.parcha\.dev|BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY/.test(contents), `Machine/product-specific material in ${path}`);
