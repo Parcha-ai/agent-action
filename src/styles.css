@@ -6,7 +6,7 @@
   color: var(--aa-foreground, #18181b);
   box-sizing: border-box;
 }
-:where(.aa-root) { display: inline-flex; align-items: stretch; flex-shrink: 0; }
+:where(.aa-root) { display: inline-flex; align-items: stretch; flex-shrink: 0; border-radius: var(--aa-radius, 0.5rem); }
 :where(.aa-action, .aa-trigger, .aa-close) {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 0.5rem 0.75rem; min-height: 2.25rem; border: 1px solid var(--aa-border, #d4d4d8);
@@ -17,6 +17,11 @@
 :where(.aa-trigger) { padding: 0.5rem; border-left: 0; border-radius: 0 var(--aa-radius, 0.5rem) var(--aa-radius, 0.5rem) 0; }
 :where(.aa-action:hover, .aa-trigger:hover, .aa-close:hover) { background: var(--aa-hover, #f4f4f5); }
 :where(.aa-action:focus-visible, .aa-trigger:focus-visible, .aa-close:focus-visible, .aa-textarea:focus-visible) { outline: 2px solid currentColor; outline-offset: 3px; }
+/* Keep per-half outlines as a fallback; supported browsers outline the whole control. */
+@supports selector(:has(:focus-visible)) {
+  :where(.aa-root:has(> .aa-action:focus-visible, > .aa-trigger:focus-visible)) { outline: 2px solid currentColor; outline-offset: 3px; }
+  :where(.aa-action:focus-visible, .aa-trigger:focus-visible) { outline: none; background: var(--aa-hover, #f4f4f5); }
+}
 :where(.aa-action:disabled, .aa-trigger:disabled) { cursor: not-allowed; opacity: 0.5; }
 :where(.aa-icon) { display: inline-flex; align-items: center; justify-content: center; width: 1.125rem; height: 1.125rem; flex-shrink: 0; }
 :where(.aa-icon > svg, .aa-icon > img) { max-width: 100%; max-height: 100%; }

@@ -10,9 +10,9 @@ createRoot(document.getElementById('root')!).render(
     <h1 className="mb-3 text-3xl font-semibold tracking-tight">Bring your own styles.</h1>
     <p className="mb-8 max-w-xl text-slate-600">An unstyled Agent Action component, styled entirely with Tailwind CSS.</p>
     <AgentAction label="Build with your agent" prompt="Help me build a product using my existing tools." classNames={{
-      root: 'inline-flex items-stretch text-sm',
-      action: 'inline-flex items-center gap-2 rounded-l-xl border border-indigo-700 bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
-      trigger: 'inline-flex items-center justify-center rounded-r-xl border border-l-0 border-indigo-700 bg-indigo-600 px-3 text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
+      root: 'inline-flex items-stretch rounded-xl text-sm has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-indigo-600',
+      action: 'inline-flex items-center gap-2 rounded-l-xl border border-indigo-700 bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:bg-indigo-700 focus-visible:outline-none',
+      trigger: 'inline-flex items-center justify-center rounded-r-xl border border-l-0 border-indigo-700 bg-indigo-600 px-3 text-white hover:bg-indigo-700 focus-visible:bg-indigo-700 focus-visible:outline-none',
       menu: 'z-50 min-w-60 max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto rounded-xl border border-slate-200 bg-white p-1.5 text-sm text-slate-800 shadow-xl',
       item: 'flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 outline-none data-highlighted:bg-indigo-50 data-disabled:opacity-40',
       icon: 'inline-flex h-5 w-5 shrink-0 items-center justify-center',

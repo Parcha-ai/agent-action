@@ -21,7 +21,7 @@ function Demo() {
       <section className="mini-card"><span className="tile-icon">⌘</span><h2>Explore your data</h2><p>The same agent choice, wherever you work.</p><AgentAction label="Query data" prompt="Help me analyze this week's workflow results. Ask what I want to learn, then use my configured product tools." /></section>
       <section className="mini-card custom-theme"><span className="tile-icon">✳</span><h2>Make it your own</h2><p>Your colors, your prompts, your product.</p><AgentAction label="Use your agent" prompt="Help me get started with this product. Read its public documentation first." style={{ '--aa-background': '#c2efcb', '--aa-foreground': '#173421', '--aa-border': '#c2efcb', '--aa-hover': '#a8dfb5', '--aa-radius': '18px' } as CSSProperties} /></section>
     </div>
-    <aside className="implementation"><code>npm install @parcha/agent-action</code><span>React · Optional styles · Custom providers</span><small>Local preview — npm publication pending.</small></aside>
+    <aside className="implementation"><code>npm install @parcha/agent-action</code><span>React · Optional styles · Custom providers</span><small>Open source · Apache-2.0</small></aside>
   </main>;
 }
 

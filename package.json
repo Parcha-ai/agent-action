@@ -4,7 +4,10 @@
   "description": "A customizable, remembered coding-agent handoff button for React, with a framework-independent core.",
   "type": "module",
   "license": "Apache-2.0",
-  "author": "Parcha",
+  "author": {
+    "name": "AJ Asver",
+    "url": "https://github.com/ajasver"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Parcha-ai/agent-action.git"

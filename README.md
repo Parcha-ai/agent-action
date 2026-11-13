@@ -4,6 +4,8 @@ A split button that remembers a user's coding agent and hands it the right
 prompt. Built from the AgentRun console's **Use your agent** interaction, with
 product-specific prompts and styling left to you.
 
+Created by [AJ Asver](https://github.com/ajasver) at [Parcha](https://parcha.ai).
+
 ![Agent Action: build-agent input and coding-agent dropdown](https://raw.githubusercontent.com/Parcha-ai/agent-action/main/docs/media/agent-action.png)
 
 - Open Codex, Claude Code, or Cursor with a prefilled prompt.
@@ -12,9 +14,8 @@ product-specific prompts and styling left to you.
 - Use an optional theme, your own Tailwind classes, or the framework-independent core.
 - Add product actions such as **API playground** without changing the component.
 
-**Release status:** this is a release candidate; it has not been published to
-npm. The package is Apache-2.0 licensed. React integrations support React 18.3
-and 19. Tailwind is not a dependency.
+Apache-2.0 licensed. React integrations support React 18.3 and 19.
+Tailwind is not a dependency.
 
 ## See it work
 
@@ -38,20 +39,13 @@ including any skills, MCP, API, or onboarding instructions.
 
 ## Install
 
-To try the local release candidate, run `npm pack` in this repository, then
-install the generated archive in your application:
-
-```sh
-npm install /path/to/parcha-agent-action-0.1.0.tgz
-```
-
-After publication, the registry install will be:
-
 ```sh
 npm install @parcha/agent-action
 ```
 
 Your React application must also have `react` and `react-dom` installed.
+To test a local build, run `npm ci && npm pack` in this repository and install
+the generated `.tgz` archive in your application.
 
 ## Quick start
 
@@ -92,8 +86,7 @@ import { AgentAction } from '@parcha/agent-action';
 
 const button =
   'inline-flex h-9 items-center gap-2 border border-zinc-300 bg-white ' +
-  'text-sm text-zinc-950 hover:bg-zinc-100 focus-visible:outline ' +
-  'focus-visible:outline-2 disabled:opacity-50 ' +
+  'text-sm text-zinc-950 hover:bg-zinc-100 disabled:opacity-50 ' +
   'dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100';
 
 export function StyledAction({ prompt }: { prompt: string }) {
@@ -101,9 +94,9 @@ export function StyledAction({ prompt }: { prompt: string }) {
     <AgentAction
       prompt={prompt}
       classNames={{
-        root: 'inline-flex',
-        action: `${button} rounded-l-lg px-3`,
-        trigger: `${button} rounded-r-lg border-l-0 px-2`,
+        root: 'inline-flex rounded-lg has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-zinc-500',
+        action: `${button} rounded-l-lg px-3 focus-visible:outline-none focus-visible:bg-zinc-100 dark:focus-visible:bg-zinc-800`,
+        trigger: `${button} rounded-r-lg border-l-0 px-2 focus-visible:outline-none focus-visible:bg-zinc-100 dark:focus-visible:bg-zinc-800`,
         menu: 'z-50 min-w-56 rounded-xl border border-zinc-200 bg-white p-1 shadow-lg dark:border-zinc-700 dark:bg-zinc-900',
         item: 'flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-sm text-zinc-950 outline-none data-[highlighted]:bg-zinc-100 data-[disabled]:opacity-50 dark:text-zinc-100 dark:data-[highlighted]:bg-zinc-800',
         icon: 'size-4 shrink-0',
@@ -114,7 +107,7 @@ export function StyledAction({ prompt }: { prompt: string }) {
         dialogTitle: 'text-lg font-semibold',
         dialogDescription: 'my-3 text-sm',
         textarea: 'min-h-48 w-full rounded-lg border bg-transparent p-3 font-mono text-sm',
-        close: `${button} mt-3 rounded-lg px-3`,
+        close: `${button} mt-3 rounded-lg px-3 focus-visible:outline-2 focus-visible:outline-offset-2`,
       }}
     />
   );

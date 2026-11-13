@@ -62,7 +62,7 @@ h2 { font-size: 19px; font-weight: 550; letter-spacing: -.3px; margin: 0 0 5px; 
 .aa-trigger { width: 39px; padding: 10px; }
 .aa-icon { width: 21px; height: 21px; }
 .aa-icon > svg { width: 21px; height: 21px; }
-.build-footer .aa-root { --aa-background: #bfe9c9; --aa-foreground: #14281a; --aa-border: #a5cdb0; --aa-hover: #d0f3d8; }
+.build-footer .aa-root { --aa-background: #bfe9c9; --aa-foreground: #14281a; --aa-border: #a5cdb0; --aa-hover: #d0f3d8; outline-color: #bfe9c9; }
 .aa-menu { min-width: 277px; padding: 7px; font-size: 16px; background: #222a25; border-color: #607467; border-radius: 12px; box-shadow: 0 20px 65px #000a; }
 .aa-menu[data-state="open"] { transform-origin: var(--radix-dropdown-menu-content-transform-origin); animation: showcase-menu-in 150ms ease-out; }
 @keyframes showcase-menu-in { from { opacity: 0; transform: translateY(3px) scale(.975); } to { opacity: 1; transform: none; } }
